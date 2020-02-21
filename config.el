@@ -29,6 +29,11 @@
                             ))
 (electric-pair-mode t)
 
-(set-default-font "Courier New-14")
+(setq my-prefered-font
+      (cond ((eq system-type 'windows-nt) "Courier New-14")
+            (t nil)))
+
+(when my-prefered-font
+  (set-frame-font my-prefered-font nil t))
 
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
