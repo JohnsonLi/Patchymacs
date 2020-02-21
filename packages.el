@@ -57,3 +57,16 @@
   :bind;
   ("M-x" . smex))
 
+(use-package company
+  :ensure t
+  :diminish (meghanada-mode company-mode irony-mode)
+  :config
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 3)
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous)
+  (define-key company-active-map (kbd "SPC") #'company-abort)
+  :hook
+  ((java-mode c-mode c++-mode) . company-mode))
