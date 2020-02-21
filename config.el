@@ -29,11 +29,12 @@
                             ))
 (electric-pair-mode t)
 
-(setq my-prefered-font
+(setq sys-font
       (cond ((eq system-type 'windows-nt) "Courier New-14")
+            ((eq system-type 'gnu/linux) "Ubuntu Mono-16")
             (t nil)))
 
-(when my-prefered-font
-  (set-frame-font my-prefered-font nil t))
+(when sys-font
+  (set-default-font sys-font))
 
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
