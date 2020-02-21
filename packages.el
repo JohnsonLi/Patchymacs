@@ -26,7 +26,9 @@
   (setq dashboard-startup-banner "~/.emacs.d/patch.png")
   (setq dashboard-center-content t)
   (setq dashboard-show-shortcuts nil)
-  (setq dashboard-set-init-info nil)
+  (setq dashboard-set-init-info t)
+  (setq dashboard-init-info (format "%d books read in %s"
+                                    (length package-activated-list) (emacs-init-time)))
   (setq dashboard-set-footer nil))
 
 (use-package avy
@@ -41,6 +43,11 @@
   (setq ido-enable-flex-matching nil)
   (setq ido-create-new-buffer 'always)
   (setq ido-everywhere t))
+
+(use-package all-the-icons
+  :ensure t)
+; If running for the first time run
+; all-the-icons-install-fonts
 
 (use-package ido-vertical-mode
   :ensure t
@@ -59,7 +66,7 @@
 
 (use-package company
   :ensure t
-  :diminish (meghanada-mode company-mode irony-mode)
+  :diminish (meghanada-mode company-mode)
   :config
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 3)
@@ -69,4 +76,14 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous)
   (define-key company-active-map (kbd "SPC") #'company-abort)
   :hook
-  ((java-mode c-mode c++-mode) . company-mode))
+  ((java-mode) . company-mode))
+
+(use-package meghanada
+  :ensure t
+  :defer nil
+  :config
+  (add-hook 'java-mode-hook
+            (lambda ()
+              (meghanada-mode t)))
+  (setq meghanada-java-path "java")
+  (setq meghanada-maven-path "mvn"))
