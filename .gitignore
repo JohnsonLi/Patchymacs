@@ -2,3 +2,6 @@ elpa/
 recentf
 .cache/
 auto-save-list/
+.last-package-update-day
+eshell/history
+ido.last
