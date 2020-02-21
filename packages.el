@@ -36,6 +36,11 @@
   :bind
   ("M-s" . avy-goto-char))
 
+(use-package all-the-icons
+  :ensure t)
+; If running for the first time run
+; all-the-icons-install-fonts
+
 (use-package ido
   :init
   (ido-mode 1)
@@ -43,11 +48,6 @@
   (setq ido-enable-flex-matching nil)
   (setq ido-create-new-buffer 'always)
   (setq ido-everywhere t))
-
-(use-package all-the-icons
-  :ensure t)
-; If running for the first time run
-; all-the-icons-install-fonts
 
 (use-package ido-vertical-mode
   :ensure t
