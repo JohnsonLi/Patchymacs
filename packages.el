@@ -51,8 +51,9 @@
 ; "'C-n-and-C-p-only"
 (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
 
-;(use-package smex
-;  :ensure t
-;  :init (smex-initialize)
-;  :bind
-;  ("M-x" . smex))
+(use-package smex
+  :ensure t
+  :init (smex-initialize)
+  :bind;
+  ("M-x" . smex))
+
