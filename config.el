@@ -67,3 +67,20 @@
 
 ; M-x shell opens a shell in the selected buffer
 (push (cons "\\*shell\\*" display-buffer--same-window-action) display-buffer-alist)
+
+; Change company mode default colors
+(custom-set-faces
+ '(company-preview
+   ((t (:foreground "darkgray" :underline t))))
+ '(company-preview-common
+   ((t (:inherit company-preview))))
+ '(company-tooltip
+   ((t (:background "MediumPurple4" :foreground "white"))))
+ '(company-tooltip-selection
+   ((t (:background "MediumPurple" :foreground "white"))))
+ '(company-tooltip-common
+   ((((type x)) (:inherit company-tooltip :weight bold))
+    (t (:inherit company-tooltip))))
+ '(company-tooltip-common-selection
+   ((((type x)) (:inherit company-tooltip-selection :weight bold))
+    (t (:inherit company-tooltip-selection)))))
