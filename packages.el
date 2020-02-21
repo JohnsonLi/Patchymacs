@@ -35,12 +35,7 @@
   :ensure t
   :bind
   ("M-s" . avy-goto-char))
-
-(use-package all-the-icons
-  :ensure t)
-; If running for the first time run
-; all-the-icons-install-fonts
-
+  
 (use-package ido
   :init
   (ido-mode 1)
