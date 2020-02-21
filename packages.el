@@ -77,13 +77,3 @@
   (define-key company-active-map (kbd "SPC") #'company-abort)
   :hook
   ((java-mode) . company-mode))
-
-(use-package meghanada
-  :ensure t
-  :defer nil
-  :config
-  (add-hook 'java-mode-hook
-            (lambda ()
-              (meghanada-mode t)))
-  (setq meghanada-java-path "java")
-  (setq meghanada-maven-path "mvn"))
