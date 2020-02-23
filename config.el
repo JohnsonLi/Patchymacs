@@ -1,4 +1,4 @@
-'; Start emacs maximized
+; Start emacs maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;Remove startup screen
