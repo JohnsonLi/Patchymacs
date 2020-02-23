@@ -83,4 +83,7 @@
     (t (:inherit company-tooltip))))
  '(company-tooltip-common-selection
    ((((type x)) (:inherit company-tooltip-selection :weight bold))
-    (t (:inherit company-tooltip-selection)))))
+    (t (:inherit company-tooltip-selection))))
+
+ ; Change lavender theme comment color because it was too dark
+ '(font-lock-comment-face ((t (:foreground "#807687")))))
