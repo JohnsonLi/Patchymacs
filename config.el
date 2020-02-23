@@ -1,4 +1,4 @@
-; Start emacs maximized
+'; Start emacs maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;Remove startup screen
@@ -87,3 +87,6 @@
 
  ; Change lavender theme comment color because it was too dark
  '(font-lock-comment-face ((t (:foreground "#807687")))))
+
+; Disable cursor blink
+(blink-cursor-mode -1)
