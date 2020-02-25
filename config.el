@@ -56,7 +56,7 @@
 ; Change font depending on os
 (setq sys-font
       (cond ((eq system-type 'windows-nt) "Courier New-14")
-            ((eq system-type 'gnu/linux) "Ubuntu Mono-16")
+            ((eq system-type 'gnu/linux) "Inconsolata-16")
             (t nil)))
 
 (when sys-font
